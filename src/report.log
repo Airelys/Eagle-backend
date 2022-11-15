@@ -2897,3 +2897,253 @@ AttributeError: 'list' object has no attribute 'tolist'
 2022-11-15 00:09:11,347 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
 2022-11-15 00:09:16,449 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 1131.2481382843794, best pos: [0.00176618 0.67706027 0.31648094 0.80024288]
 2022-11-15 00:09:16,615 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 00:09:16] "[37mPOST //ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-15 00:47:58,990 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 00:47:58] "[37mOPTIONS //SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-15 00:47:59,492 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 00:47:59] "[37mPOST //SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-15 02:17:07,745 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-15 02:17:38,721 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 02:17:38] "[37mOPTIONS //SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-15 02:17:39,554 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 02:17:39] "[37mPOST //SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-15 03:20:11,816 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:20:11] "[37mOPTIONS //ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-15 03:20:14,911 - server - ERROR - Exception on /ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Trabajo de Diploma\backend\src\controllers\parameter_estimation.py", line 36, in post
+    opt,sol = self.s.solve_model()
+  File "D:\Trabajo de Diploma\backend\src\services\parameter_estimation_service.py", line 75, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\Trabajo de Diploma\backend\src\business_logic\algorithms\metaheuristics.py", line 47, in solve
+    sol = differential_evolution(self.objective_function.objective_function,bounds=self.bounds,mutation=self.scaled_factor,recombination=self.crossing_factor)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 296, in differential_evolution
+    with DifferentialEvolutionSolver(func, bounds, args=args,
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 541, in __init__
+    raise ValueError('bounds should be a sequence containing '
+ValueError: bounds should be a sequence containing real valued (min, max) pairs for each value in x
+2022-11-15 03:20:14,951 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:20:14] "[35m[1mPOST //ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-15 03:26:36,886 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-15 03:30:23,030 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:30:23] "[37mOPTIONS //ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-15 03:30:23,786 - server - ERROR - Exception on /ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Trabajo de Diploma\backend\src\controllers\parameter_estimation.py", line 36, in post
+    opt,sol = self.s.solve_model()
+  File "D:\Trabajo de Diploma\backend\src\services\parameter_estimation_service.py", line 82, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\Trabajo de Diploma\backend\src\business_logic\algorithms\metaheuristics.py", line 47, in solve
+    sol = differential_evolution(self.objective_function.objective_function,bounds=self.bounds,mutation=self.scaled_factor,recombination=self.crossing_factor)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 296, in differential_evolution
+    with DifferentialEvolutionSolver(func, bounds, args=args,
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 541, in __init__
+    raise ValueError('bounds should be a sequence containing '
+ValueError: bounds should be a sequence containing real valued (min, max) pairs for each value in x
+2022-11-15 03:30:23,802 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:30:23] "[35m[1mPOST //ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-15 03:31:44,798 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-15 03:32:26,424 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:32:26] "[37mOPTIONS //ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-15 03:32:27,195 - server - ERROR - Exception on /ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Trabajo de Diploma\backend\src\controllers\parameter_estimation.py", line 36, in post
+    opt,sol = self.s.solve_model()
+  File "D:\Trabajo de Diploma\backend\src\services\parameter_estimation_service.py", line 85, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\Trabajo de Diploma\backend\src\business_logic\algorithms\metaheuristics.py", line 47, in solve
+    sol = differential_evolution(self.objective_function.objective_function,bounds=self.bounds,mutation=self.scaled_factor,recombination=self.crossing_factor)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 296, in differential_evolution
+    with DifferentialEvolutionSolver(func, bounds, args=args,
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 541, in __init__
+    raise ValueError('bounds should be a sequence containing '
+ValueError: bounds should be a sequence containing real valued (min, max) pairs for each value in x
+2022-11-15 03:32:27,211 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:32:27] "[35m[1mPOST //ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-15 03:38:37,428 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-15 03:39:29,902 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:39:29] "[37mOPTIONS //ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-15 03:39:30,758 - server - ERROR - Exception on /ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Trabajo de Diploma\backend\src\controllers\parameter_estimation.py", line 36, in post
+    opt,sol = self.s.solve_model()
+  File "D:\Trabajo de Diploma\backend\src\services\parameter_estimation_service.py", line 85, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\Trabajo de Diploma\backend\src\business_logic\algorithms\metaheuristics.py", line 48, in solve
+    sol = differential_evolution(self.objective_function.objective_function,bounds=self.bounds,mutation=self.scaled_factor,recombination=self.crossing_factor)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 296, in differential_evolution
+    with DifferentialEvolutionSolver(func, bounds, args=args,
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 541, in __init__
+    raise ValueError('bounds should be a sequence containing '
+ValueError: bounds should be a sequence containing real valued (min, max) pairs for each value in x
+2022-11-15 03:39:30,774 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:39:30] "[35m[1mPOST //ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-15 03:40:19,485 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-15 03:41:09,552 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:41:09] "[37mOPTIONS //ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-15 03:41:10,301 - server - ERROR - Exception on /ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Trabajo de Diploma\backend\src\controllers\parameter_estimation.py", line 36, in post
+    opt,sol = self.s.solve_model()
+  File "D:\Trabajo de Diploma\backend\src\services\parameter_estimation_service.py", line 85, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\Trabajo de Diploma\backend\src\business_logic\algorithms\metaheuristics.py", line 48, in solve
+    sol = differential_evolution(self.objective_function.objective_function,bounds=self.bounds,mutation=self.scaled_factor,recombination=self.crossing_factor)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 296, in differential_evolution
+    with DifferentialEvolutionSolver(func, bounds, args=args,
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 541, in __init__
+    raise ValueError('bounds should be a sequence containing '
+ValueError: bounds should be a sequence containing real valued (min, max) pairs for each value in x
+2022-11-15 03:41:10,301 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:41:10] "[35m[1mPOST //ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-15 03:46:54,032 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-15 03:47:45,430 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:47:45] "[37mOPTIONS //ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-15 03:47:45,446 - server - ERROR - Exception on /ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Trabajo de Diploma\backend\src\controllers\parameter_estimation.py", line 36, in post
+    opt,sol = self.s.solve_model()
+  File "D:\Trabajo de Diploma\backend\src\services\parameter_estimation_service.py", line 53, in solve_model
+    min_max.append(self.params_min[index],self.params_max[index])
+TypeError: list.append() takes exactly one argument (2 given)
+2022-11-15 03:47:45,446 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:47:45] "[35m[1mPOST //ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-15 03:48:33,978 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-15 03:49:22,260 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:49:22] "[37mOPTIONS //ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-15 03:49:48,000 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:49:48] "[37mPOST //ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-15 03:51:27,188 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:51:27] "[37mOPTIONS //ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-15 03:51:27,235 - pyswarms.backend.generators - ERROR - Bounds and/or init_pos should be of size (4,)
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\backend\generators.py", line 81, in generate_swarm
+    pos = center * np.random.uniform(
+  File "mtrand.pyx", line 1134, in numpy.random.mtrand.RandomState.uniform
+  File "_common.pyx", line 579, in numpy.random._common.cont
+  File "_common.pyx", line 496, in numpy.random._common.cont_broadcast_2
+  File "__init__.pxd", line 742, in numpy.PyArray_MultiIterNew3
+ValueError: shape mismatch: objects cannot be broadcast to a single shape.  Mismatch is between arg 0 with shape (5, 4) and arg 1 with shape (5, 2).
+2022-11-15 03:51:27,235 - server - ERROR - Exception on /ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Trabajo de Diploma\backend\src\controllers\parameter_estimation.py", line 36, in post
+    opt,sol = self.s.solve_model()
+  File "D:\Trabajo de Diploma\backend\src\services\parameter_estimation_service.py", line 82, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\Trabajo de Diploma\backend\src\business_logic\algorithms\metaheuristics.py", line 31, in solve
+    optimizer = ps.single.GlobalBestPSO(n_particles=self.particle,dimensions=self.dimension,options=self.dict_params, bounds=self.bounds)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\single\global_best.py", line 134, in __init__
+    super(GlobalBestPSO, self).__init__(
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\base\base_single.py", line 124, in __init__
+    self.reset()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\base\base_single.py", line 204, in reset
+    self.swarm = create_swarm(
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\backend\generators.py", line 236, in create_swarm
+    position = generate_swarm(
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\backend\generators.py", line 81, in generate_swarm
+    pos = center * np.random.uniform(
+  File "mtrand.pyx", line 1134, in numpy.random.mtrand.RandomState.uniform
+  File "_common.pyx", line 579, in numpy.random._common.cont
+  File "_common.pyx", line 496, in numpy.random._common.cont_broadcast_2
+  File "__init__.pxd", line 742, in numpy.PyArray_MultiIterNew3
+ValueError: shape mismatch: objects cannot be broadcast to a single shape.  Mismatch is between arg 0 with shape (5, 4) and arg 1 with shape (5, 2).
+2022-11-15 03:51:27,235 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:51:27] "[35m[1mPOST //ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-15 03:54:22,650 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:54:22] "[37mOPTIONS //ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-15 03:54:22,703 - pyswarms.backend.generators - ERROR - Bounds and/or init_pos should be of size (4,)
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\backend\generators.py", line 81, in generate_swarm
+    pos = center * np.random.uniform(
+  File "mtrand.pyx", line 1134, in numpy.random.mtrand.RandomState.uniform
+  File "_common.pyx", line 579, in numpy.random._common.cont
+  File "_common.pyx", line 496, in numpy.random._common.cont_broadcast_2
+  File "__init__.pxd", line 742, in numpy.PyArray_MultiIterNew3
+ValueError: shape mismatch: objects cannot be broadcast to a single shape.  Mismatch is between arg 0 with shape (5, 4) and arg 1 with shape (5, 2).
+2022-11-15 03:54:22,703 - server - ERROR - Exception on /ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Trabajo de Diploma\backend\src\controllers\parameter_estimation.py", line 36, in post
+    opt,sol = self.s.solve_model()
+  File "D:\Trabajo de Diploma\backend\src\services\parameter_estimation_service.py", line 82, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\Trabajo de Diploma\backend\src\business_logic\algorithms\metaheuristics.py", line 31, in solve
+    optimizer = ps.single.GlobalBestPSO(n_particles=self.particle,dimensions=self.dimension,options=self.dict_params, bounds=self.bounds)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\single\global_best.py", line 134, in __init__
+    super(GlobalBestPSO, self).__init__(
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\base\base_single.py", line 124, in __init__
+    self.reset()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\base\base_single.py", line 204, in reset
+    self.swarm = create_swarm(
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\backend\generators.py", line 236, in create_swarm
+    position = generate_swarm(
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\backend\generators.py", line 81, in generate_swarm
+    pos = center * np.random.uniform(
+  File "mtrand.pyx", line 1134, in numpy.random.mtrand.RandomState.uniform
+  File "_common.pyx", line 579, in numpy.random._common.cont
+  File "_common.pyx", line 496, in numpy.random._common.cont_broadcast_2
+  File "__init__.pxd", line 742, in numpy.PyArray_MultiIterNew3
+ValueError: shape mismatch: objects cannot be broadcast to a single shape.  Mismatch is between arg 0 with shape (5, 4) and arg 1 with shape (5, 2).
+2022-11-15 03:54:22,719 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:54:22] "[35m[1mPOST //ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-15 03:54:54,113 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-15 03:55:48,006 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:55:48] "[37mOPTIONS //ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-15 03:55:48,777 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-15 03:55:54,788 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 6909457.8334662765, best pos: [0.13574348 0.57487394]
+2022-11-15 03:55:54,988 - werkzeug - INFO - 127.0.0.1 - - [15/Nov/2022 03:55:54] "[37mPOST //ParameterEstimation HTTP/1.1[0m" 200 -

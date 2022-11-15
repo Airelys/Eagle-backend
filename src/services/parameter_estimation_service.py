@@ -43,17 +43,28 @@ class ParameterEstimationService:
         self.scaled = scaled
 
     def solve_model(self):
+        min = []
+        max = []
+        min_max =[]
+        for index,item in enumerate(self.params_est):
+            if(item):
+                min.append(self.params_min[index])
+                max.append(self.params_max[index])
+                min_max.append((self.params_min[index],self.params_max[index]))
+        print(min)
+        print(max)
+
         model = dict[self.model_name](self.vars_initials,self.params_initials,params_est=self.params_est,N=self.N)
         opt = []
         print(self.metaheuristic)
         if(self.classical_method!='None'and self.metaheuristic!='None'):
             sol_met = []
             if (self.metaheuristic=='PSO'):
-                metaheuristic = PSO(model,read(self.path),self.total_points,[self.params_min,self.params_max],self.iter,self.particle,
+                metaheuristic = PSO(model,read(self.path),self.total_points,[min,max],self.iter,self.particle,
                                 self.cognitive,self.social,self.inercia)
                 sol_met = metaheuristic.solve()
             else:
-                metaheuristic = DifferentialEvolution(model,read(self.path),self.total_points,[self.params_min,self.params_max],
+                metaheuristic = DifferentialEvolution(model,read(self.path),self.total_points,min_max,
                                                   self.iter,self.population,self.crossing,self.scaled)
                 sol_met = metaheuristic.solve()
 
@@ -66,11 +77,11 @@ class ParameterEstimationService:
 
         else:
             if (self.metaheuristic=='PSO'):
-                metaheuristic = PSO(model,read(self.path),self.total_points,[self.params_min,self.params_max],self.iter,self.particle,
+                metaheuristic = PSO(model,read(self.path),self.total_points,[min,max],self.iter,self.particle,
                                 self.cognitive,self.social,self.inercia)
                 opt = metaheuristic.solve()
             else:
-                metaheuristic = DifferentialEvolution(model,read(self.path),self.total_points,[self.params_min,self.params_max],
+                metaheuristic = DifferentialEvolution(model,read(self.path),self.total_points,min_max,
                                                   self.iter,self.population,self.crossing,self.scaled)
                 opt = metaheuristic.solve()
                 
