@@ -21,8 +21,7 @@ class ParameterEstimation(Resource):
                                             list(res['params_min']), 
                                             list(res['params_max']), 
                                             str(res['classical_method']), 
-                                            str(res['metaheuristic']), 
-                                            str(res['path']),
+                                            str(res['metaheuristic']),
                                             int(res['iter']),
                                             int(res['particle']),
                                             float(res['cognitive']),
@@ -40,5 +39,6 @@ class ParameterEstimation(Resource):
         
         import os
         os.remove("model.png")
+        os.remove("data.xlsx")
         
         return json.dumps({'opt': opt, 'sol': sol, 'img': str(b64_string)[2:-1]})

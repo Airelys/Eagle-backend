@@ -13,7 +13,7 @@ dict = {
 
 class ParameterEstimationService:
     def __init__(self,model_name,vars_initials,params,params_est,t,total_points,method,N,
-                 params_min,params_max,classical_method,metaheuristic,path,iter,particle,cognitive,
+                 params_min,params_max,classical_method,metaheuristic,iter,particle,cognitive,
                  social,inercia,population,crossing,scaled) -> None:
         self.model_name = model_name
         self.vars_initials = vars_initials
@@ -32,7 +32,6 @@ class ParameterEstimationService:
         self.params_max = params_max
         self.classical_method = classical_method
         self.metaheuristic = metaheuristic
-        self.path = path
         self.iter = iter
         self.particle = particle
         self.cognitive = cognitive
@@ -60,28 +59,28 @@ class ParameterEstimationService:
         if(self.classical_method!='None'and self.metaheuristic!='None'):
             sol_met = []
             if (self.metaheuristic=='PSO'):
-                metaheuristic = PSO(model,read(self.path),self.total_points,[min,max],self.iter,self.particle,
+                metaheuristic = PSO(model,read('data.xlsx'),self.total_points,[min,max],self.iter,self.particle,
                                 self.cognitive,self.social,self.inercia)
                 sol_met = metaheuristic.solve()
             else:
-                metaheuristic = DifferentialEvolution(model,read(self.path),self.total_points,min_max,
+                metaheuristic = DifferentialEvolution(model,read('data.xlsx'),self.total_points,min_max,
                                                   self.iter,self.population,self.crossing,self.scaled)
                 sol_met = metaheuristic.solve()
 
-            classical = ClassicalMethods(self.classical_method,model,read(self.path),self.total_points,sol_met)
+            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx'),self.total_points,sol_met)
             opt = classical.solve()
 
         elif(self.classical_method!='None'):
-            classical = ClassicalMethods(self.classical_method,model,read(self.path),self.total_points,self.params)
+            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx'),self.total_points,self.params)
             opt = classical.solve()
 
         else:
             if (self.metaheuristic=='PSO'):
-                metaheuristic = PSO(model,read(self.path),self.total_points,[min,max],self.iter,self.particle,
+                metaheuristic = PSO(model,read('data.xlsx'),self.total_points,[min,max],self.iter,self.particle,
                                 self.cognitive,self.social,self.inercia)
                 opt = metaheuristic.solve()
             else:
-                metaheuristic = DifferentialEvolution(model,read(self.path),self.total_points,min_max,
+                metaheuristic = DifferentialEvolution(model,read('data.xlsx'),self.total_points,min_max,
                                                   self.iter,self.population,self.crossing,self.scaled)
                 opt = metaheuristic.solve()
                 
