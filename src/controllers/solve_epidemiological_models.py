@@ -1,9 +1,8 @@
 from flask_restful import Resource
-from flask import jsonify,send_file,request
+from flask import request
 from services.solve_epidemiological_models_service import*
 import json
 import base64
-import cv2
 
 class SolveEpidemiologicalModels(Resource):
     def __init__(self) -> None:

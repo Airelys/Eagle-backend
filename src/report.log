@@ -3289,3 +3289,27 @@ TypeError: post() takes 0 positional arguments but 1 was given
 2022-11-16 20:13:03,189 - werkzeug - INFO - 127.0.0.1 - - [16/Nov/2022 20:13:03] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
 2022-11-16 20:13:03,205 - werkzeug - INFO - 127.0.0.1 - - [16/Nov/2022 20:13:03] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
 2022-11-16 20:13:21,850 - werkzeug - INFO - 127.0.0.1 - - [16/Nov/2022 20:13:21] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-16 20:41:18,161 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-16 20:42:13,102 - werkzeug - INFO - 127.0.0.1 - - [16/Nov/2022 20:42:13] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-16 20:42:13,117 - werkzeug - INFO - 127.0.0.1 - - [16/Nov/2022 20:42:13] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-16 20:42:50,813 - werkzeug - INFO - 127.0.0.1 - - [16/Nov/2022 20:42:50] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-16 22:16:14,697 - werkzeug - INFO - 127.0.0.1 - - [16/Nov/2022 22:16:14] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-16 22:16:14,717 - werkzeug - INFO - 127.0.0.1 - - [16/Nov/2022 22:16:14] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-16 22:16:26,992 - werkzeug - INFO - 127.0.0.1 - - [16/Nov/2022 22:16:26] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-17 16:22:27,095 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-17 16:23:12,261 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2022 16:23:12] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-17 16:23:12,261 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2022 16:23:12] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-17 16:23:37,057 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2022 16:23:37] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-17 16:27:14,324 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2022 16:27:14] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-17 16:27:14,979 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2022 16:27:14] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-17 16:27:46,091 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2022 16:27:46] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-17 16:27:46,098 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2022 16:27:46] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-17 16:28:07,482 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2022 16:28:07] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-17 22:32:44,904 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-17 22:46:57,289 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2022 22:46:57] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-17 22:46:57,351 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2022 22:46:57] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-17 22:47:27,486 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2022 22:47:27] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-17 23:22:46,907 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-18 00:33:40,688 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2022 00:33:40] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-18 00:33:40,704 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2022 00:33:40] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-18 00:34:04,120 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2022 00:34:04] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
