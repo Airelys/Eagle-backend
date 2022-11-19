@@ -12,7 +12,7 @@ dict = {
 
 
 class ParameterEstimationService:
-    def __init__(self,model_name,vars_initials,params,params_est,t,total_points,method,N,
+    def __init__(self,model_name,vars_initials,params,params_est,t,method,N,
                  params_min,params_max,classical_method,metaheuristic,iter,particle,cognitive,
                  social,inercia,population,crossing,scaled) -> None:
         self.model_name = model_name
@@ -25,7 +25,6 @@ class ParameterEstimationService:
         print(self.params)
         self.params_est = params_est
         self.t = t
-        self.total_points = total_points
         self.method = method
         self.N = N
         self.params_min = params_min
@@ -59,37 +58,41 @@ class ParameterEstimationService:
         if(self.classical_method!='None'and self.metaheuristic!='None'):
             sol_met = []
             if (self.metaheuristic=='PSO'):
-                metaheuristic = PSO(model,read('data.xlsx'),self.total_points,[min,max],self.iter,self.particle,
+                metaheuristic = PSO(model,read('data.xlsx'),[min,max],self.iter,self.particle,
                                 self.cognitive,self.social,self.inercia)
                 sol_met = metaheuristic.solve()
             else:
-                metaheuristic = DifferentialEvolution(model,read('data.xlsx'),self.total_points,min_max,
+                metaheuristic = DifferentialEvolution(model,read('data.xlsx'),min_max,
                                                   self.iter,self.population,self.crossing,self.scaled)
                 sol_met = metaheuristic.solve()
 
-            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx'),self.total_points,sol_met)
+            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx'),sol_met)
             opt = classical.solve()
 
         elif(self.classical_method!='None'):
-            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx'),self.total_points,self.params)
+            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx'),self.params)
             opt = classical.solve()
 
         else:
             if (self.metaheuristic=='PSO'):
-                metaheuristic = PSO(model,read('data.xlsx'),self.total_points,[min,max],self.iter,self.particle,
+                metaheuristic = PSO(model,read('data.xlsx'),[min,max],self.iter,self.particle,
                                 self.cognitive,self.social,self.inercia)
                 opt = metaheuristic.solve()
             else:
-                metaheuristic = DifferentialEvolution(model,read('data.xlsx'),self.total_points,min_max,
+                metaheuristic = DifferentialEvolution(model,read('data.xlsx'),min_max,
                                                   self.iter,self.population,self.crossing,self.scaled)
                 opt = metaheuristic.solve()
                 
-        sol = model.numeric_solver([0,self.t],opt,self.total_points,self.method)
+        sol = model.numeric_solver([0,self.t],opt,self.method)
 
         sol_new =[]
-
+        sol_init =[1]
+        for i in self.vars_initials:
+            sol_init.append(i)
+        sol_new.append(sol_init)
+    
         for index,item in enumerate(sol[0]):
-            temp = []
+            temp = [index+2]
             for element in sol:
                 temp.append(element[index])
             sol_new.append(temp)
@@ -103,5 +106,7 @@ class ParameterEstimationService:
                 i+=1
             else:
                 opt_new.append(0)
+
+        print(opt_new)
 
         return opt_new,sol_new

@@ -15,7 +15,6 @@ class ParameterEstimation(Resource):
                                             list(res['params']),
                                             list(res['params_est']),
                                             int(res['t']),
-                                            int(res['total_points']),
                                             str(res['method']),
                                             int(res['N']),
                                             list(res['params_min']), 

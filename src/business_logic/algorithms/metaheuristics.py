@@ -6,9 +6,9 @@ from scipy.optimize import differential_evolution
 
 class Metaheuristics(ABC):
     @abstractmethod
-    def __init__(self, model: Epidemiological_model, data: list, total_points:float,bounds:list,
+    def __init__(self, model: Epidemiological_model, data: list,bounds:list,
                  iter_max:float=5):
-        self.objective_function = ObjectiveFunction(model, data, total_points)
+        self.objective_function = ObjectiveFunction(model, data)
         self.iter_max = iter_max
         self.bounds = bounds
 
@@ -17,10 +17,10 @@ class Metaheuristics(ABC):
         return []
 
 class PSO(Metaheuristics):
-    def __init__(self, model: Epidemiological_model, data: list, total_points:float,
+    def __init__(self, model: Epidemiological_model, data: list,
                  bounds:list=None, iter_max:float=10, particle:float=5, cognitive_param:float=0.5, 
                  social_param:float=0.3, inercia_param:float=0.9) -> None:
-        super().__init__(model,data,total_points,bounds,iter_max)
+        super().__init__(model,data,bounds,iter_max)
 
         self.particle = particle
         self.dimension = len(bounds[0])
@@ -34,10 +34,10 @@ class PSO(Metaheuristics):
 
 
 class DifferentialEvolution(Metaheuristics):
-    def __init__(self, model: Epidemiological_model, data: list, total_points:float,
+    def __init__(self, model: Epidemiological_model, data: list,
                  bounds:list, iter_max:float=10, population:float=100, crossing_factor:float=0.8, 
                  scaled_factor:float=0.6) -> None:
-        super().__init__(model,data,total_points,bounds,iter_max)
+        super().__init__(model,data,bounds,iter_max)
 
         self.population = population
         self.crossing_factor = crossing_factor
