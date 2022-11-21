@@ -3610,3 +3610,247 @@ KeyError: 'model_name'
 2022-11-19 02:01:18,567 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
 2022-11-19 02:01:40,749 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2022 02:01:40] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
 2022-11-19 02:01:41,435 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2022 02:01:41] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 01:27:43,431 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-20 01:29:47,513 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 01:29:47] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 01:30:03,051 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 01:30:03] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 20:10:36,886 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-20 20:20:03,076 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:20:03] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 20:20:06,831 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:20:06] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 20:24:40,621 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:24:40] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 20:24:41,044 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:24:41] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 20:27:29,753 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:27:29] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 20:27:30,252 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:27:30] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 20:29:12,751 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:29:12] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 20:29:13,356 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:29:13] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 20:30:30,561 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:30:30] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 20:30:31,005 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:30:31] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 20:31:53,920 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:31:53] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 20:31:53,920 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:31:53] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 20:31:58,678 - server - ERROR - Exception on /api/ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\controllers\parameter_estimation.py", line 34, in post
+    opt,sol = self.s.solve_model()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\services\parameter_estimation_service.py", line 85, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\algorithms\metaheuristics.py", line 48, in solve
+    sol = differential_evolution(self.objective_function.objective_function,bounds=self.bounds,
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 296, in differential_evolution
+    with DifferentialEvolutionSolver(func, bounds, args=args,
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 575, in __init__
+    self.init_population_lhs()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 620, in init_population_lhs
+    samples = (segsize * rng.uniform(size=self.population_shape)
+  File "mtrand.pyx", line 1121, in numpy.random.mtrand.RandomState.uniform
+  File "_common.pyx", line 615, in numpy.random._common.cont
+TypeError: 'float' object cannot be interpreted as an integer
+2022-11-20 20:31:58,693 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:31:58] "[35m[1mPOST //api/ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-20 20:33:09,848 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-20 20:34:20,759 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:34:20] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 20:34:20,759 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:34:20] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 20:50:14,225 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-20 20:51:23,008 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:51:23] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 20:51:23,008 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:51:23] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 20:59:39,170 - server - ERROR - Exception on /api/ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backend_bases.py", line 2978, in _wait_cursor_for_draw_cm
+    yield
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backends\backend_agg.py", line 410, in draw
+    super().draw()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backends\backend_qt5.py", line 449, in draw
+    self.update()
+RuntimeError: wrapped C/C++ object of type FigureCanvasQTAgg has been deleted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\controllers\parameter_estimation.py", line 34, in post
+    opt,sol = self.s.solve_model()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\services\parameter_estimation_service.py", line 85, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\algorithms\metaheuristics.py", line 48, in solve
+    sol = differential_evolution(self.objective_function.objective_function,bounds=self.bounds,
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 308, in differential_evolution
+    ret = solver.solve()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 750, in solve
+    self._calculate_population_energies(
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 873, in _calculate_population_energies
+    calc_energies = list(self._mapwrapper(self.func,
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 1255, in __call__
+    return self.f(x, *self.args)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\objective_function.py", line 11, in objective_function
+    numeric_solve = self.model.numeric_solver( [0,len(self.data)], params)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\model.py", line 77, in numeric_solver
+    return super().numeric_solver(t_interval,params,method)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\model.py", line 46, in numeric_solver
+    plt.savefig('model.png')
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backends\backend_qt5agg.py", line 81, in print_figure
+    super().print_figure(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backend_bases.py", line 2210, in print_figure
+    result = print_method(
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backend_bases.py", line 1639, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backends\backend_agg.py", line 509, in print_png
+    FigureCanvasAgg.draw(self)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backends\backend_agg.py", line 410, in draw
+    super().draw()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backend_bases.py", line 2980, in _wait_cursor_for_draw_cm
+    self.set_cursor(self._lastCursor)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backends\backend_qt5.py", line 771, in set_cursor
+    self.canvas.setCursor(cursord[cursor])
+RuntimeError: wrapped C/C++ object of type FigureCanvasQTAgg has been deleted
+2022-11-20 20:59:39,571 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 20:59:39] "[35m[1mPOST //api/ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-20 20:59:57,878 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-20 21:00:46,282 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:00:46] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:00:46,297 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:00:46] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:02:45,871 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-20 21:03:25,685 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:03:25] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:03:25,700 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:03:25] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:03:37,561 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:03:37] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:05:54,123 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:05:54] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:05:54,139 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:05:54] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:06:00,725 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:06:00] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:07:48,240 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-20 21:08:29,105 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:08:29] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:08:29,121 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:08:29] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:08:48,922 - server - ERROR - Exception on /api/ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\controllers\parameter_estimation.py", line 34, in post
+    opt,sol = self.s.solve_model()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\services\parameter_estimation_service.py", line 85, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\algorithms\metaheuristics.py", line 50, in solve
+    print('soy ' + sol)
+TypeError: can only concatenate str (not "OptimizeResult") to str
+2022-11-20 21:08:48,922 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:08:48] "[35m[1mPOST //api/ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-20 21:13:31,752 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-20 21:14:03,737 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:14:03] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:14:03,748 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:14:03] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:14:24,304 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:14:24] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:16:29,983 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:16:29] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:16:29,999 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:16:29] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:16:44,534 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:16:44] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:18:54,892 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:18:54] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:18:54,892 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:18:54] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:22:53,059 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:22:53] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:22:53,059 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:22:53] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:23:15,672 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:23:15] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:24:13,503 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:24:13] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:24:13,524 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:24:13] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:44:26,317 - server - ERROR - Exception on /api/ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\controllers\parameter_estimation.py", line 34, in post
+    opt,sol = self.s.solve_model()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\services\parameter_estimation_service.py", line 85, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\algorithms\metaheuristics.py", line 47, in solve
+    sol = differential_evolution(self.objective_function.objective_function,bounds=self.bounds,
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 308, in differential_evolution
+    ret = solver.solve()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 759, in solve
+    next(self)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 1069, in __next__
+    energy = self.func(parameters)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\optimize\_differentialevolution.py", line 1255, in __call__
+    return self.f(x, *self.args)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\objective_function.py", line 11, in objective_function
+    numeric_solve = self.model.numeric_solver( [0,len(self.data)], params)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\model.py", line 105, in numeric_solver
+    return super().numeric_solver(t_interval, params,method)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\model.py", line 45, in numeric_solver
+    plt.savefig('model.png')
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backends\backend_qt5agg.py", line 81, in print_figure
+    super().print_figure(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backend_bases.py", line 2210, in print_figure
+    result = print_method(
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backend_bases.py", line 1639, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backends\backend_agg.py", line 509, in print_png
+    FigureCanvasAgg.draw(self)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backends\backend_agg.py", line 404, in draw
+    with RendererAgg.lock, \
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\backend_bases.py", line 2974, in _wait_cursor_for_draw_cm
+    time.time(), getattr(self, "_draw_time", -np.inf))
+RuntimeError: wrapped C/C++ object of type NavigationToolbar2QT has been deleted
+2022-11-20 21:44:26,333 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:44:26] "[35m[1mPOST //api/ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-20 21:44:38,316 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-20 21:46:31,637 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:46:31] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:46:31,653 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:46:31] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:46:32,533 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-20 21:46:38,829 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 42604.33658041124, best pos: [0.03024618 0.97356416]
+2022-11-20 21:46:39,049 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:46:39] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:47:33,071 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:47:33] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:47:33,071 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:47:33] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:47:37,468 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:47:37] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:48:16,449 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:48:16] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:48:16,465 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:48:16] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:48:31,999 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:48:31] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:49:28,895 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:49:28] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 21:49:28,911 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:49:28] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 21:50:07,087 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 21:50:07] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 22:41:28,100 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 22:41:28] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 22:41:29,456 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 22:41:29] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-20 22:47:51,230 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 22:47:51] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 22:47:51,230 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 22:47:51] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 22:47:51,369 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-20 22:47:57,495 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 66871428.48032129, best pos: [0.32911607]
+2022-11-20 22:47:57,785 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 22:47:57] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 23:38:28,206 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 23:38:28] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 23:38:28,218 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 23:38:28] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 23:38:28,461 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 8.0, 'c2': 3.0, 'w': 5.0}
+2022-11-20 23:38:35,617 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 69408943.28010261, best pos: [0.05924129]
+2022-11-20 23:38:35,862 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 23:38:35] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 23:45:49,017 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 23:45:49] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-20 23:45:49,017 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 23:45:49] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-20 23:46:09,538 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2022 23:46:09] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -

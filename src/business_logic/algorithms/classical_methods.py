@@ -11,6 +11,7 @@ class ClassicalMethods:
         self.params = params
 
     def solve(self):
-        model = minimize(self.objective_function.objective_function, self.params, method=self.method, options={'disp': True})
+        model = minimize(self.objective_function.objective_function, self.params, method=self.method, 
+                        options={'disp': True})
         return model.x
         

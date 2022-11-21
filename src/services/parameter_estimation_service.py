@@ -52,7 +52,8 @@ class ParameterEstimationService:
         print(min)
         print(max)
 
-        model = dict[self.model_name](self.vars_initials,self.params_initials,params_est=self.params_est,N=self.N)
+        model = dict[self.model_name](self.vars_initials,self.params_initials,params_est=self.params_est,
+                                      N=self.N)
         opt = []
         print(self.metaheuristic)
         if(self.classical_method!='None'and self.metaheuristic!='None'):

@@ -15,7 +15,8 @@ methods = ['RK45','RK23','DOP853','Radau','BDF','LSODA']
     
 class Epidemiological_model(ABC):
     @abstractmethod
-    def __init__(self,id:str,vars_initials:list,params_initial:list,name:str,name_var:list,params_est:list=None,N:float =1) -> None:
+    def __init__(self,id:str,vars_initials:list,params_initial:list,name:str,name_var:list,
+                params_est:list=None,N:float =1) -> None:
         self.id=id
         self.name=name
         self.name_var=name_var
@@ -31,10 +32,10 @@ class Epidemiological_model(ABC):
     @abstractmethod
     def numeric_solver(self,t_interval:list,params:list,method:str='RK45')->list:
             
-        sol = solve_ivp(self.model, t_interval, self.vars_initials, args=[params], method=method, dense_output=True)
+        sol = solve_ivp(self.model, t_interval, self.vars_initials, args=[params], method=method, 
+                        dense_output=True)
        
         t = [i for i in range(1,t_interval[1])]
-        print(t)
         z = sol.sol(t)
         
         plt.plot(t,z.T)
@@ -47,7 +48,8 @@ class Epidemiological_model(ABC):
         return z
        
 class SI(Epidemiological_model):
-    def __init__(self,vars_initials:list,params_initial:list,name:str='SI',name_var:list=['S','I'],params_est:list=None,N:float =1):
+    def __init__(self,vars_initials:list,params_initial:list,name:str='SI',name_var:list=['S','I'],
+                params_est:list=None,N:float =1):
         super().__init__('SI',vars_initials,params_initial,name,name_var,params_est,N)
         
     def model(self,t:float,z:list,params:list)->list:
@@ -74,7 +76,8 @@ class SI(Epidemiological_model):
         return super().numeric_solver(t_interval,params,method)
     
 class SIR(Epidemiological_model):
-    def __init__(self,vars_initials:list,params_initial:list,name:str='SIR',name_var:list=['S','I','R'],params_est:list=None,N:float =1):
+    def __init__(self,vars_initials:list,params_initial:list,name:str='SIR',name_var:list=['S','I','R'],
+                params_est:list=None,N:float =1):
         super().__init__("SIR",vars_initials,params_initial,name,name_var,params_est,N)
         
     def model(self,t:float,z:list,params:list)->list:
@@ -102,7 +105,8 @@ class SIR(Epidemiological_model):
         return super().numeric_solver(t_interval, params,method)
            
 class SIRS(Epidemiological_model):
-    def __init__(self,vars_initials:list,params_initial:list,name:str='SIRS',name_var:list=['S','I','R'],params_est:list=None,N:float =1):
+    def __init__(self,vars_initials:list,params_initial:list,name:str='SIRS',name_var:list=['S','I','R'],
+                params_est:list=None,N:float =1):
         super().__init__("SIRS",vars_initials,params_initial,name,name_var,params_est,N)
         
     def model(self,t:float,z:list,params:list)->list:
@@ -133,7 +137,8 @@ class SIRS(Epidemiological_model):
 
         
 class SEIR(Epidemiological_model):
-    def __init__(self,vars_initials:list,params_initial:list,name:str='SEIR',name_var:list=['S','E','I','R'],params_est:list=None,N:float =1):
+    def __init__(self,vars_initials:list,params_initial:list,name:str='SEIR',
+                name_var:list=['S','E','I','R'],params_est:list=None,N:float =1):
         super().__init__("SEIR",vars_initials,params_initial,name,name_var,params_est,N)
             
     def model(self,t:float,z:list,params:list)->list:

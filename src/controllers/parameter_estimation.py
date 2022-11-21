@@ -26,7 +26,7 @@ class ParameterEstimation(Resource):
                                             float(res['cognitive']),
                                             float(res['social']),
                                             float(res['inercia']),
-                                            float(res['population']),
+                                            int(res['population']),
                                             float(res['crossing']),
                                             float(res['scaled']))
     

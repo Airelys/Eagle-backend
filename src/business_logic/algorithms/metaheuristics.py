@@ -44,7 +44,8 @@ class DifferentialEvolution(Metaheuristics):
         self.scaled_factor = scaled_factor
 
     def solve(self):
-        print(self.bounds)
-        sol = differential_evolution(self.objective_function.objective_function,bounds=self.bounds,mutation=self.scaled_factor,recombination=self.crossing_factor)
+        sol = differential_evolution(self.objective_function.objective_function,bounds=self.bounds,
+                                    mutation=self.scaled_factor,recombination=self.crossing_factor, 
+                                    popsize=self.population)
         return sol.x
 
