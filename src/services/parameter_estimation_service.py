@@ -2,6 +2,8 @@ from business_logic.model import *
 from business_logic.algorithms.classical_methods import *
 from business_logic.algorithms.metaheuristics import *
 from business_logic.utils.utils import *
+import base64
+import os
 
 dict = {
     'SI': SI,
@@ -14,15 +16,13 @@ dict = {
 class ParameterEstimationService:
     def __init__(self,model_name,vars_initials,params,params_est,t,method,N,
                  params_min,params_max,classical_method,metaheuristic,iter,particle,cognitive,
-                 social,inercia,population,crossing,scaled) -> None:
+                 social,inercia,population,crossing,scaled,di) -> None:
         self.model_name = model_name
-        self.vars_initials = vars_initials
         self.params_initials = params
         self.params = []
         for i,item in enumerate(params_est):
             if(item):
                 self.params.append(params[i])
-        print(self.params)
         self.params_est = params_est
         self.t = t
         self.method = method
@@ -39,6 +39,11 @@ class ParameterEstimationService:
         self.population = population
         self.crossing = crossing
         self.scaled = scaled
+        self.di = di
+        S = N
+        for i in vars_initials:
+            S -= i
+        self.vars_initials = [S] + vars_initials
 
     def solve_model(self):
         min = []
@@ -52,35 +57,35 @@ class ParameterEstimationService:
         print(min)
         print(max)
 
-        model = dict[self.model_name](self.vars_initials,self.params_initials,params_est=self.params_est,
+        model = dict[self.model_name](self.vars_initials,self.params_initials,self.di,params_est=self.params_est,
                                       N=self.N)
         opt = []
         print(self.metaheuristic)
         if(self.classical_method!='None'and self.metaheuristic!='None'):
             sol_met = []
             if (self.metaheuristic=='PSO'):
-                metaheuristic = PSO(model,read('data.xlsx'),[min,max],self.iter,self.particle,
+                metaheuristic = PSO(model,read('data.xlsx',self.N),[min,max],self.iter,self.particle,
                                 self.cognitive,self.social,self.inercia)
                 sol_met = metaheuristic.solve()
             else:
-                metaheuristic = DifferentialEvolution(model,read('data.xlsx'),min_max,
+                metaheuristic = DifferentialEvolution(model,read('data.xlsx',self.N),min_max,
                                                   self.iter,self.population,self.crossing,self.scaled)
                 sol_met = metaheuristic.solve()
 
-            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx'),sol_met)
+            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx',self.N),sol_met)
             opt = classical.solve()
 
         elif(self.classical_method!='None'):
-            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx'),self.params)
+            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx',self.N),self.params)
             opt = classical.solve()
 
         else:
             if (self.metaheuristic=='PSO'):
-                metaheuristic = PSO(model,read('data.xlsx'),[min,max],self.iter,self.particle,
+                metaheuristic = PSO(model,read('data.xlsx',self.N),[min,max],self.iter,self.particle,
                                 self.cognitive,self.social,self.inercia)
                 opt = metaheuristic.solve()
             else:
-                metaheuristic = DifferentialEvolution(model,read('data.xlsx'),min_max,
+                metaheuristic = DifferentialEvolution(model,read('data.xlsx',self.N),min_max,
                                                   self.iter,self.population,self.crossing,self.scaled)
                 opt = metaheuristic.solve()
                 
@@ -108,6 +113,21 @@ class ParameterEstimationService:
             else:
                 opt_new.append(0)
 
-        print(opt_new)
+        imgs = []
 
-        return opt_new,sol_new
+        with open("model.png", "rb") as img_file:
+            b64_model = base64.b64encode(img_file.read())
+            imgs.append(str(b64_model)[2:-1])
+        
+        os.remove("model.png")
+        os.remove("data.xlsx")
+
+        self.model_name = self.model_name[:-1] if self.model_name=='SIRS'else self.model_name
+        for i in self.model_name:
+            with open(str(i)+'.png', "rb") as img_file:
+                b64_model = base64.b64encode(img_file.read())
+                imgs.append(str(b64_model)[2:-1])
+            
+            os.remove(str(i)+'.png')
+
+        return opt_new,sol_new,imgs

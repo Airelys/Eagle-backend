@@ -16,7 +16,7 @@ class ParameterEstimation(Resource):
                                             list(res['params_est']),
                                             int(res['t']),
                                             str(res['method']),
-                                            int(res['N']),
+                                            int(res['P']),
                                             list(res['params_min']), 
                                             list(res['params_max']), 
                                             str(res['classical_method']), 
@@ -28,16 +28,13 @@ class ParameterEstimation(Resource):
                                             float(res['inercia']),
                                             int(res['population']),
                                             float(res['crossing']),
-                                            float(res['scaled']))
+                                            float(res['scaled']),
+                                            bool(res['di']))
     
     def post(self):
-        opt,sol = self.s.solve_model()
-        
-        with open("model.png", "rb") as img_file:
-            b64_string = base64.b64encode(img_file.read())
+        opt,sol,imgs = self.s.solve_model()
         
         import os
-        os.remove("model.png")
-        os.remove("data.xlsx")
         
-        return json.dumps({'opt': opt, 'sol': sol, 'img': str(b64_string)[2:-1]})
+        
+        return json.dumps({'opt': opt, 'sol': sol, 'img': imgs })

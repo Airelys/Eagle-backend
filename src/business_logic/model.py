@@ -15,7 +15,7 @@ methods = ['RK45','RK23','DOP853','Radau','BDF','LSODA']
     
 class Epidemiological_model(ABC):
     @abstractmethod
-    def __init__(self,id:str,vars_initials:list,params_initial:list,name:str,name_var:list,
+    def __init__(self,id:str,vars_initials:list,params_initial:list,di:bool,name:str,name_var:list,
                 params_est:list=None,N:float =1) -> None:
         self.id=id
         self.name=name
@@ -24,6 +24,7 @@ class Epidemiological_model(ABC):
         self.N =N
         self.params_initial = params_initial
         self.params_est = params_est
+        self.di = di
         
     @abstractmethod
     def model(self,t:float,z:list,params:list)->list:
@@ -38,24 +39,36 @@ class Epidemiological_model(ABC):
         t = [i for i in range(1,t_interval[1])]
         z = sol.sol(t)
         
-        plt.plot(t,z.T)
-        plt.xlabel('t')
-        plt.legend(self.name_var, shadow=True)
-        plt.title(self.name)
+        divide_by = self.N if self.di else 1
+        fig, ax = plt.subplots()
+        color = ['b','r','g','y']
+        for i in range(0,len(self.name_var)):
+            ax.plot(t, z[i], color[i], alpha=0.5, lw=2, label=self.name_var[i])
+        ax.set_xlabel('Tiempo /días')
+        ax.set_ylabel(f'Número (dividido por {divide_by:,})')
+        legend = ax.legend()
         plt.savefig('model.png')
-        plt.close()
+        plt.close() 
+
+        for i in range(0,len(self.name_var)):
+            fig, ax = plt.subplots()
+            ax.plot(t, z[i], color[i], alpha=0.5, lw=2, label=self.name_var[i])
+            ax.set_xlabel('Tiempo /días')
+            ax.set_ylabel(f'Número (dividido por {divide_by:,})')
+            legend = ax.legend()
+            print(self.name_var[i])
+            plt.savefig(self.name_var[i]+'.png')
+            plt.close()
 
         return z
        
 class SI(Epidemiological_model):
-    def __init__(self,vars_initials:list,params_initial:list,name:str='SI',name_var:list=['S','I'],
+    def __init__(self,vars_initials:list,params_initial:list,di:bool,name:str='SI',name_var:list=['S','I'],
                 params_est:list=None,N:float =1):
-        super().__init__('SI',vars_initials,params_initial,name,name_var,params_est,N)
+        super().__init__('SI',vars_initials,params_initial,di,name,name_var,params_est,N)
         
     def model(self,t:float,z:list,params:list)->list:
-        s,i = z
-        s = s/self.N
-        i = i/self.N
+        S,I= z
 
         params_temp = params
 
@@ -69,21 +82,19 @@ class SI(Epidemiological_model):
 
         b,births,deaths,deaths_i = params_temp
 
-        return [births*s-1*b*s*i-deaths*s,
-          b*s*i-(deaths+deaths_i)*i]
+        return [births*S-1*b*S*I/self.N-deaths*S,
+          b*S*I/self.N-(deaths+deaths_i)*I]
         
     def numeric_solver(self,t_interval:list,params:list,method:str='RK45')->list:
         return super().numeric_solver(t_interval,params,method)
     
 class SIR(Epidemiological_model):
-    def __init__(self,vars_initials:list,params_initial:list,name:str='SIR',name_var:list=['S','I','R'],
+    def __init__(self,vars_initials:list,params_initial:list,di:bool,name:str='SIR',name_var:list=['S','I','R'],
                 params_est:list=None,N:float =1):
-        super().__init__("SIR",vars_initials,params_initial,name,name_var,params_est,N)
+        super().__init__("SIR",vars_initials,params_initial,di,name,name_var,params_est,N)
         
     def model(self,t:float,z:list,params:list)->list:
-        s,i,r = z
-        s = s/self.N
-        i = i/self.N
+        S,I,R = z
 
         params_temp = params
 
@@ -97,22 +108,20 @@ class SIR(Epidemiological_model):
             
         b,y,births,deaths,deaths_i = params_temp
 
-        return [births*s-1*b*s*i-deaths*s,
-                   b*s*i-y*i-(deaths+deaths_i)*i,
-                   y*i-deaths*r]
+        return [births*S-1*b*S*I/self.N-deaths*S,
+                   b*S*I/self.N-y*I-(deaths+deaths_i)*I,
+                   y*I-deaths*R]
         
     def numeric_solver(self, t_interval: list, params: list,method:str='RK45')->list:
         return super().numeric_solver(t_interval, params,method)
            
 class SIRS(Epidemiological_model):
-    def __init__(self,vars_initials:list,params_initial:list,name:str='SIRS',name_var:list=['S','I','R'],
+    def __init__(self,vars_initials:list,params_initial:list,di:bool,name:str='SIRS',name_var:list=['S','I','R'],
                 params_est:list=None,N:float =1):
-        super().__init__("SIRS",vars_initials,params_initial,name,name_var,params_est,N)
+        super().__init__("SIRS",vars_initials,params_initial,di,name,name_var,params_est,N)
         
     def model(self,t:float,z:list,params:list)->list:
-        s,i,r = z
-        s = s/self.N
-        i = i/self.N
+        S,I,R = z
 
         params_temp = params
 
@@ -128,23 +137,21 @@ class SIRS(Epidemiological_model):
         b,d,y,births,deaths,deaths_i = params_temp
         
 
-        return [births*s-1*b*s*i+d*r-deaths*s,
-                   b*s*i-y*i-(deaths+deaths_i)*i,
-                   y*i-d*r-deaths*r]
+        return [births*S-1*b*S*I/self.N+d*R-deaths*S,
+                   b*S*I/self.N-y*I-(deaths+deaths_i)*I,
+                   y*I-d*R-deaths*R]
         
     def numeric_solver(self,t_interval:list,params:list,method:str='RK45')->list:
         return super().numeric_solver(t_interval,params,method)
 
         
 class SEIR(Epidemiological_model):
-    def __init__(self,vars_initials:list,params_initial:list,name:str='SEIR',
-                name_var:list=['S','E','I','R'],params_est:list=None,N:float =1):
-        super().__init__("SEIR",vars_initials,params_initial,name,name_var,params_est,N)
+    def __init__(self,vars_initials:list,params_initial:list,di:bool,name:str='SEIR',
+                name_var:list=['S','I','R','E'],params_est:list=None,N:float =1):
+        super().__init__("SEIR",vars_initials,params_initial,di,name,name_var,params_est,N)
             
     def model(self,t:float,z:list,params:list)->list:
-        s,e,i,r = z
-        s = s/self.N
-        i = i/self.N
+        S,I,R,E = z
 
         params_temp = params
 
@@ -157,11 +164,12 @@ class SEIR(Epidemiological_model):
                     i+=1
 
         b,el,y,births,deaths,deaths_i = params_temp
+        print(b,el,y,births,deaths,deaths_i)
 
-        return [births*s-1*b*s*i-deaths*s,
-                   b*s*i-(deaths+el)*e,
-                   el*e-(y+deaths+deaths_i)*i,
-                   y*i-deaths*r]
+        return [births*S-1*b*S*I/self.N-deaths*S,
+                el*E-(y+deaths+deaths_i)*I,
+                y*I-deaths*R,
+                b*S*I/self.N-(deaths+el)*E]
         
     def numeric_solver(self,t_interval:list,params:list,method:str='RK45')->list:
         return super().numeric_solver(t_interval,params,method)
