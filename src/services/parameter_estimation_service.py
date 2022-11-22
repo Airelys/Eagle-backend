@@ -56,6 +56,8 @@ class ParameterEstimationService:
                 min_max.append((self.params_min[index],self.params_max[index]))
         print(min)
         print(max)
+        print('Soy min max')
+        print(min_max)
 
         model = dict[self.model_name](self.vars_initials,self.params_initials,self.di,params_est=self.params_est,
                                       N=self.N)
@@ -64,28 +66,28 @@ class ParameterEstimationService:
         if(self.classical_method!='None'and self.metaheuristic!='None'):
             sol_met = []
             if (self.metaheuristic=='PSO'):
-                metaheuristic = PSO(model,read('data.xlsx',self.N),[min,max],self.iter,self.particle,
+                metaheuristic = PSO(model,read('data.xlsx',self.N,self.model_name),[min,max],self.iter,self.particle,
                                 self.cognitive,self.social,self.inercia)
                 sol_met = metaheuristic.solve()
             else:
-                metaheuristic = DifferentialEvolution(model,read('data.xlsx',self.N),min_max,
+                metaheuristic = DifferentialEvolution(model,read('data.xlsx',self.N,self.model_name),min_max,
                                                   self.iter,self.population,self.crossing,self.scaled)
                 sol_met = metaheuristic.solve()
 
-            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx',self.N),sol_met)
+            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx',self.N,self.model_name),sol_met,min_max)
             opt = classical.solve()
 
         elif(self.classical_method!='None'):
-            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx',self.N),self.params)
+            classical = ClassicalMethods(self.classical_method,model,read('data.xlsx',self.N,self.model_name),self.params,min_max)
             opt = classical.solve()
 
         else:
             if (self.metaheuristic=='PSO'):
-                metaheuristic = PSO(model,read('data.xlsx',self.N),[min,max],self.iter,self.particle,
+                metaheuristic = PSO(model,read('data.xlsx',self.N,self.model_name),[min,max],self.iter,self.particle,
                                 self.cognitive,self.social,self.inercia)
                 opt = metaheuristic.solve()
             else:
-                metaheuristic = DifferentialEvolution(model,read('data.xlsx',self.N),min_max,
+                metaheuristic = DifferentialEvolution(model,read('data.xlsx',self.N,self.model_name),min_max,
                                                   self.iter,self.population,self.crossing,self.scaled)
                 opt = metaheuristic.solve()
                 
@@ -104,7 +106,8 @@ class ParameterEstimationService:
             sol_new.append(temp)
 
         opt_new = []
-
+        print(opt)
+        print('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
         i=0
         for index,item in enumerate(self.params_est):
             if(item):
@@ -113,6 +116,7 @@ class ParameterEstimationService:
             else:
                 opt_new.append(0)
 
+        print(opt_new)
         imgs = []
 
         with open("model.png", "rb") as img_file:

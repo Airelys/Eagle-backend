@@ -4398,3 +4398,139 @@ AttributeError: 'ParameterEstimationService' object has no attribute 'name_model
 2022-11-22 01:57:49,081 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 01:57:49] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
 2022-11-22 01:57:49,119 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 01:57:49] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
 2022-11-22 01:58:19,331 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 01:58:19] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 09:28:25,450 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 10:08:40,255 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:08:40] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:08:40,255 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:08:40] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:10:28,683 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:10:28] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:12:16,795 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:12:16] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:12:16,812 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:12:16] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:12:41,822 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:12:41] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:14:47,666 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:14:47] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:14:47,681 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:14:47] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:15:06,533 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:15:06] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:17:58,810 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:17:58] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:17:58,825 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:17:58] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:18:33,882 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:18:33] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:20:46,530 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 10:21:42,670 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:21:42] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:21:42,692 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:21:42] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:22:12,794 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:22:12] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:24:44,091 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 10:25:20,588 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:25:20] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:25:20,619 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:25:20] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:25:40,761 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:25:40] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:27:24,207 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:27:24] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:27:24,261 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:27:24] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:28:54,539 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:28:54] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:30:20,327 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:30:20] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:30:20,393 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:30:20] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:32:51,407 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:32:51] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:33:43,990 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:33:43] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:33:44,076 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:33:44] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:33:44,123 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-22 10:34:05,716 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 37.97083285403296, best pos: [0.10853956 0.57897327]
+2022-11-22 10:34:06,580 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:34:06] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:35:43,413 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:35:43] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:35:43,513 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:35:43] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:35:43,599 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-22 10:36:04,872 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 180.4493704900478, best pos: [0.05998211 0.54074263]
+2022-11-22 10:36:05,657 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:36:05] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:38:55,913 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:38:55] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:38:56,042 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:38:56] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:38:56,160 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-22 10:39:17,452 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 25.356453532678344, best pos: [0.02281531 0.23962928]
+2022-11-22 10:39:18,238 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:39:18] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:41:09,882 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:41:09] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-22 10:41:10,969 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:41:10] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-22 10:43:23,913 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 10:44:06,670 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:44:06] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:44:06,833 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:44:06] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:44:07,712 - server - ERROR - Exception on /api/ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\controllers\parameter_estimation.py", line 35, in post
+    opt,sol,imgs = self.s.solve_model()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\services\parameter_estimation_service.py", line 86, in solve_model
+    metaheuristic = PSO(model,read('data.xlsx',self.N),[min,max],self.iter,self.particle,
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\utils\utils.py", line 15, in read
+    s.append(N-s[j-1]-i[j]-r[j]-e[j])
+IndexError: list index out of range
+2022-11-22 10:44:07,729 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:44:07] "[35m[1mPOST //api/ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-22 10:44:40,042 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 10:45:27,270 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:45:27] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:45:27,270 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:45:27] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:45:28,079 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-22 10:45:49,716 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4998878193.429224, best pos: [0.76801658 0.00767612]
+2022-11-22 10:45:50,480 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:45:50] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:46:47,078 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:46:47] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:46:47,094 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:46:47] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:47:11,036 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:47:11] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:48:25,460 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:48:25] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:48:25,476 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:48:25] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:48:48,000 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:48:48] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:49:55,548 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:49:55] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:49:55,570 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:49:55] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:49:55,771 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-22 10:50:17,324 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 4997557427.304914, best pos: [0.98231413 0.45397742]
+2022-11-22 10:50:18,072 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:50:18] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:51:27,480 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:51:27] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:51:27,512 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:51:27] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 10:57:39,761 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 10:58:16,183 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:58:16] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 10:58:16,183 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 10:58:16] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 11:22:04,224 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 11:22:52,878 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 11:22:52] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 11:22:52,878 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 11:22:52] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 11:25:16,791 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 11:25:55,242 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 11:25:55] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 11:25:55,242 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 11:25:55] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 11:28:21,878 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 11:29:01,503 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 11:29:01] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 11:29:01,503 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 11:29:01] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 11:36:52,489 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 11:37:52,462 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 11:37:52] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 11:37:52,478 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 11:37:52] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 11:37:59,263 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 11:37:59] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 11:39:23,970 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 11:39:23] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 11:39:23,986 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 11:39:23] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 11:39:24,061 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-22 11:39:45,031 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 49750074.37449891, best pos: [0.87929577 0.22011327]
+2022-11-22 11:39:45,771 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 11:39:45] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 12:42:12,900 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 12:42:54,382 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:42:54] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 12:42:54,398 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:42:54] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 12:42:55,338 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-22 12:43:13,804 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 8534417.276785692, best pos: [0.37736228 0.24852967]
+2022-11-22 12:43:14,590 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:43:14] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 12:44:02,636 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:44:02] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 12:44:02,652 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:44:02] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 12:44:02,721 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-22 12:44:22,093 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 15138027.498508219, best pos: [0.30777882 0.24954453]
+2022-11-22 12:44:22,941 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:44:22] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 12:45:08,091 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:45:08] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 12:45:08,129 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:45:08] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 12:45:08,185 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-22 12:45:28,808 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 6359337.845204707, best pos: [0.33514497 0.22871442]
+2022-11-22 12:45:29,617 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:45:29] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 12:46:47,273 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:46:47] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 12:46:47,335 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:46:47] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 12:48:16,141 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:48:16] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 12:49:29,628 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:49:29] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 12:49:29,681 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:49:29] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 12:49:55,227 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:49:55] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 12:50:38,741 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:50:38] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 12:50:38,810 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:50:38] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 12:52:32,582 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 12:52:32] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 13:01:17,685 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 13:02:00,369 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 13:02:00] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 13:02:00,369 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 13:02:00] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 13:02:04,846 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 13:02:04] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -

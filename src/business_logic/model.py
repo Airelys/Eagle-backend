@@ -32,6 +32,7 @@ class Epidemiological_model(ABC):
     
     @abstractmethod
     def numeric_solver(self,t_interval:list,params:list,method:str='RK45')->list:
+        print(params)
             
         sol = solve_ivp(self.model, t_interval, self.vars_initials, args=[params], method=method, 
                         dense_output=True)
@@ -43,7 +44,7 @@ class Epidemiological_model(ABC):
         fig, ax = plt.subplots()
         color = ['b','r','g','y']
         for i in range(0,len(self.name_var)):
-            ax.plot(t, z[i], color[i], alpha=0.5, lw=2, label=self.name_var[i])
+            ax.plot(t, z[i]/divide_by, color[i], alpha=0.5, lw=2, label=self.name_var[i])
         ax.set_xlabel('Tiempo /días')
         ax.set_ylabel(f'Número (dividido por {divide_by:,})')
         legend = ax.legend()
@@ -52,7 +53,7 @@ class Epidemiological_model(ABC):
 
         for i in range(0,len(self.name_var)):
             fig, ax = plt.subplots()
-            ax.plot(t, z[i], color[i], alpha=0.5, lw=2, label=self.name_var[i])
+            ax.plot(t, z[i]/divide_by, color[i], alpha=0.5, lw=2, label=self.name_var[i])
             ax.set_xlabel('Tiempo /días')
             ax.set_ylabel(f'Número (dividido por {divide_by:,})')
             legend = ax.legend()

@@ -35,8 +35,8 @@ class PSO(Metaheuristics):
 
 class DifferentialEvolution(Metaheuristics):
     def __init__(self, model: Epidemiological_model, data: list,
-                 bounds:list, iter_max:float=10, population:float=5, crossing_factor:float=0.8, 
-                 scaled_factor:float=0.6) -> None:
+                 bounds:list, iter_max:float=10, population:float=5, crossing_factor:float=0.5, 
+                 scaled_factor:float=0.3) -> None:
         super().__init__(model,data,bounds,iter_max)
 
         self.population = population

@@ -1,6 +1,6 @@
 import pandas as pd
 
-def read (path,N):
+def read (path,N,name):
     df = pd.read_excel(path,header=None)
     s,i,r,e = [],[],[],[]
     
@@ -10,8 +10,26 @@ def read (path,N):
         r.append(row[column_r])
         e.append(row[column_e])
 
-    for j in range(1,len(i)):
-        s.append(N-i[j]-r[j]-e[j])
+    if(name=='SI'):
+        s.append(N-i[1])
+        z= i[1]
+        for j in range(2,len(i)):
+            s.append(N-z-i[j])
+            z += i[j]
+
+    elif(name=='SIR'or name=='SIRS'):
+        s.append(N-i[1]-r[1])
+        z= i[1]+r[1]
+        for j in range(2,len(i)):
+            s.append(N-z-i[j]-r[j])
+            z += i[j]+r[j]
+
+    elif(name=='SEIR'):
+        s.append(N-i[1]-r[1]-e[1])
+        z= i[1]+r[1]+e[1]
+        for j in range(2,len(i)):
+            s.append(N-z-i[j]-r[j]-e[j])
+            z += i[j]+r[j]+e[j]
 
     return s,i[1:],r[1:],e[1:]
 

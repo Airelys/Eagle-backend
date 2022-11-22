@@ -8,7 +8,7 @@ class ObjectiveFunction:
         self.data = data
  
     def objective_function(self, params:list):
-        numeric_solve = self.model.numeric_solver( [0,len(self.data)], params)
+        numeric_solve = self.model.numeric_solver( [0,len(self.data[0])], params)
         vector_numeric_solve = []
         vector_data = []
 
