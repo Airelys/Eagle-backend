@@ -17,8 +17,6 @@ class SolveEpidemiologicalModels(Resource):
     def post(self):
         sol,imgs = self.s.solve_model()
 
-        
-
         return json.dumps({'sol': sol, 'img': imgs})
         
 

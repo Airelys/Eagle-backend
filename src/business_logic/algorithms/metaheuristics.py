@@ -30,7 +30,7 @@ class PSO(Metaheuristics):
     def solve(self):
         optimizer = ps.single.GlobalBestPSO(n_particles=self.particle,dimensions=self.dimension,options=self.dict_params, bounds=self.bounds)
         best_cost, best_pos = optimizer.optimize(self.objective_function.objective_function_pso,iters=self.iter_max)
-        return best_pos
+        return best_pos,best_cost
 
 
 class DifferentialEvolution(Metaheuristics):
@@ -47,5 +47,5 @@ class DifferentialEvolution(Metaheuristics):
         sol = differential_evolution(self.objective_function.objective_function,bounds=self.bounds,
                                     mutation=self.scaled_factor,recombination=self.crossing_factor, 
                                     popsize=self.population)
-        return sol.x
+        return sol.x,sol.fun
 

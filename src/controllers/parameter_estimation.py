@@ -32,9 +32,6 @@ class ParameterEstimation(Resource):
                                             bool(res['di']))
     
     def post(self):
-        opt,sol,imgs = self.s.solve_model()
+        opt,sol,imgs,fun = self.s.solve_model()
         
-        import os
-        
-        
-        return json.dumps({'opt': opt, 'sol': sol, 'img': imgs })
+        return json.dumps({'opt': opt, 'sol': sol, 'img': imgs, 'fun': fun})

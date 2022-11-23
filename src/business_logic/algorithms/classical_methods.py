@@ -11,9 +11,8 @@ class ClassicalMethods:
         self.bounds =bounds
 
     def solve(self):
-        print(self.bounds)
-        print(self.params)
         model = minimize(self.objective_function.objective_function, self.params, method=self.method, 
                         bounds=self.bounds,options={'disp': True})
-        return model.x
+        
+        return model.x,model.fun
         

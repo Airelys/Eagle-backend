@@ -4534,3 +4534,208 @@ IndexError: list index out of range
 2022-11-22 13:02:00,369 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 13:02:00] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
 2022-11-22 13:02:00,369 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 13:02:00] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
 2022-11-22 13:02:04,846 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 13:02:04] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 15:33:02,107 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 15:34:42,379 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 15:34:42] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 15:34:42,381 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 15:34:42] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 15:39:47,890 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 15:39:47] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 15:41:58,228 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 15:41:58] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 15:41:58,230 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 15:41:58] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 15:45:51,673 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 15:45:51] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 18:22:15,115 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-22 18:24:32,106 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 18:24:32] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-22 18:24:33,402 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 18:24:33] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-22 18:25:40,213 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 18:25:40] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-22 18:25:41,428 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 18:25:41] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-22 18:26:16,437 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 18:26:16] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-22 18:26:18,034 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 18:26:18] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-22 18:27:08,217 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 18:27:08] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-22 18:27:08,220 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 18:27:08] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-22 18:27:14,973 - werkzeug - INFO - 127.0.0.1 - - [22/Nov/2022 18:27:14] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 07:36:18,680 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-23 07:38:52,345 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 07:38:52] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-23 07:38:54,430 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 07:38:54] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-23 07:39:56,625 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 07:39:56] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-23 07:39:57,823 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 07:39:57] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-23 07:40:55,647 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 07:40:55] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 07:40:55,647 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 07:40:55] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 07:40:57,040 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-23 07:41:15,892 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7096767.890994991, best pos: [0.49979472 0.41812246]
+2022-11-23 07:44:57,500 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 07:44:57] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 15:40:34,591 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-23 10:45:06,627 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 10:45:06] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-23 10:45:08,492 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 10:45:08] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-23 10:47:19,909 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 10:47:19] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-23 10:47:21,773 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 10:47:21] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-23 10:54:43,974 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 10:54:43] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 10:54:43,977 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 10:54:43] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 10:55:44,696 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 10:55:44] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 16:23:23,481 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-23 16:26:12,014 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:26:12] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 16:26:12,017 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:26:12] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 16:26:13,383 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-23 16:26:14,457 - server - ERROR - Exception on /api/ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\controllers\parameter_estimation.py", line 35, in post
+    opt,sol,imgs = self.s.solve_model()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\services\parameter_estimation_service.py", line 90, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\algorithms\metaheuristics.py", line 32, in solve
+    best_cost, best_pos = optimizer.optimize(self.objective_function.objective_function_pso,iters=self.iter_max)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\single\global_best.py", line 209, in optimize
+    self.swarm.current_cost = compute_objective_function(self.swarm, objective_func, pool=pool, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\backend\operators.py", line 239, in compute_objective_function
+    return objective_func(swarm.position, **kwargs)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\objective_function.py", line 40, in objective_function_pso
+    funct = self.objective_function(item)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\objective_function.py", line 11, in objective_function
+    numeric_solve = self.model.numeric_solver( [0,len(self.data[0])], params,self.data)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\model.py", line 119, in numeric_solver
+    return super().numeric_solver(t_interval, params,data,method)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\model.py", line 58, in numeric_solver
+    ax.plot(t, data[i-1]/divide_by, "o")
+TypeError: unsupported operand type(s) for /: 'list' and 'int'
+2022-11-23 16:26:14,601 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:26:14] "[35m[1mPOST //api/ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-23 16:39:05,047 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-23 16:40:17,142 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:40:17] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 16:40:17,145 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:40:17] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 16:40:18,299 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-23 16:40:18,308 - server - ERROR - Exception on /api/ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\controllers\parameter_estimation.py", line 35, in post
+    opt,sol,imgs = self.s.solve_model()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\services\parameter_estimation_service.py", line 90, in solve_model
+    opt = metaheuristic.solve()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\algorithms\metaheuristics.py", line 32, in solve
+    best_cost, best_pos = optimizer.optimize(self.objective_function.objective_function_pso,iters=self.iter_max)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\single\global_best.py", line 209, in optimize
+    self.swarm.current_cost = compute_objective_function(self.swarm, objective_func, pool=pool, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\backend\operators.py", line 239, in compute_objective_function
+    return objective_func(swarm.position, **kwargs)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\objective_function.py", line 40, in objective_function_pso
+    funct = self.objective_function(item)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\objective_function.py", line 11, in objective_function
+    numeric_solve = self.model.numeric_solver( [0,len(self.data[0])], params,self.data)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\model.py", line 127, in numeric_solver
+    return super().numeric_solver(t_interval, params,method)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\model.py", line 37, in numeric_solver
+    sol = solve_ivp(self.model, t_interval, self.vars_initials, args=[params], method=method,
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\integrate\_ivp\ivp.py", line 503, in solve_ivp
+    if method not in METHODS and not (
+TypeError: unhashable type: 'list'
+2022-11-23 16:40:18,320 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:40:18] "[35m[1mPOST //api/ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-23 16:42:07,108 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-23 16:43:05,130 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:43:05] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 16:43:05,131 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:43:05] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 16:43:06,351 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-23 16:43:06,640 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 13983570.128575204, best pos: [0.94422576 0.95588877]
+2022-11-23 16:43:07,684 - server - ERROR - Exception on /api/ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\controllers\parameter_estimation.py", line 35, in post
+    opt,sol,imgs = self.s.solve_model()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\services\parameter_estimation_service.py", line 97, in solve_model
+    model.plot(sol,data,[0,self.t])
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\model.py", line 130, in plot
+    return super().plot(z,data,t_interval)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\model.py", line 63, in plot
+    data[i-1]=[ j/divide_by for j in data[i-1]]
+TypeError: 'tuple' object does not support item assignment
+2022-11-23 16:43:07,686 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:43:07] "[35m[1mPOST //api/ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-23 16:45:51,302 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-23 16:46:49,171 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:46:49] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 16:46:49,173 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:46:49] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 16:46:50,276 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-23 16:46:50,577 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 13425529.069706418, best pos: [0.63541182 0.59774649]
+2022-11-23 16:46:51,397 - server - ERROR - Exception on /api/ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\controllers\parameter_estimation.py", line 35, in post
+    opt,sol,imgs = self.s.solve_model()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\services\parameter_estimation_service.py", line 97, in solve_model
+    model.plot(sol,data,[0,self.t])
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\model.py", line 131, in plot
+    return super().plot(z,data,t_interval)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\model.py", line 64, in plot
+    data[i]=[ j/divide_by for j in data[i]]
+TypeError: 'tuple' object does not support item assignment
+2022-11-23 16:46:51,406 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:46:51] "[35m[1mPOST //api/ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-23 16:49:13,093 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-23 16:50:11,987 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:50:11] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 16:50:11,990 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:50:11] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 16:50:13,060 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-23 16:50:13,290 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 7519269.437016607, best pos: [0.52566826 0.45184848]
+2022-11-23 16:50:15,165 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:50:15] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 16:52:16,523 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-23 16:53:15,099 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:53:15] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 16:53:15,102 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:53:15] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 16:53:19,832 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:53:19] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 16:54:34,820 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-23 16:55:54,463 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:55:54] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 16:55:54,466 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:55:54] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 16:56:02,813 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 16:56:02] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:02:01,908 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:02:01] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 17:02:01,910 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:02:01] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:02:04,620 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:02:04] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:05:08,623 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:05:08] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 17:05:08,625 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:05:08] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:05:10,466 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:05:10] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:06:45,032 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:06:45] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:06:45,035 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:06:45] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 17:06:47,004 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:06:47] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:09:33,159 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:09:33] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 17:09:33,161 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:09:33] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:09:34,812 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:09:34] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:10:53,337 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:10:53] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:10:53,339 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:10:53] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 17:11:00,738 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:11:00] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:16:19,573 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-23 17:17:20,952 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:17:20] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:17:20,956 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:17:20] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 17:17:24,018 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:17:24] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:27:26,903 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-23 17:28:27,897 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:28:27] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:28:27,900 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:28:27] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 17:28:29,137 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-23 17:28:29,404 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 11064152.779260768, best pos: [0.2741587  0.18885434]
+2022-11-23 17:28:31,156 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:28:31] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:31:53,266 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:31:53] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-23 17:31:53,269 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:31:53] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-23 17:33:46,324 - werkzeug - INFO - 127.0.0.1 - - [23/Nov/2022 17:33:46] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -

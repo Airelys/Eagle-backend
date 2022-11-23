@@ -39,7 +39,12 @@ class Epidemiological_model(ABC):
        
         t = [i for i in range(1,t_interval[1])]
         z = sol.sol(t)
-        
+
+        return z
+
+    @abstractmethod
+    def plot(self,z,data,t_interval):
+        t = [i for i in range(1,t_interval[1])]
         divide_by = self.N if self.di else 1
         fig, ax = plt.subplots()
         color = ['b','r','g','y']
@@ -51,9 +56,14 @@ class Epidemiological_model(ABC):
         plt.savefig('model.png')
         plt.close() 
 
+        S,I,R,E = data
+        data_new =[S,I,R,E]
         for i in range(0,len(self.name_var)):
             fig, ax = plt.subplots()
             ax.plot(t, z[i]/divide_by, color[i], alpha=0.5, lw=2, label=self.name_var[i])
+            if(i>0 and any( item for item in self.params_est)):
+                data_new[i]=[ j/divide_by for j in data_new[i]]
+                ax.plot(t[:len(data_new[i])], data_new[i], "o",color='b')
             ax.set_xlabel('Tiempo /días')
             ax.set_ylabel(f'Número (dividido por {divide_by:,})')
             legend = ax.legend()
@@ -61,7 +71,6 @@ class Epidemiological_model(ABC):
             plt.savefig(self.name_var[i]+'.png')
             plt.close()
 
-        return z
        
 class SI(Epidemiological_model):
     def __init__(self,vars_initials:list,params_initial:list,di:bool,name:str='SI',name_var:list=['S','I'],
@@ -88,6 +97,9 @@ class SI(Epidemiological_model):
         
     def numeric_solver(self,t_interval:list,params:list,method:str='RK45')->list:
         return super().numeric_solver(t_interval,params,method)
+
+    def plot(self,z,data:list,t_interval:list):
+        return super().plot(z,data,t_interval)
     
 class SIR(Epidemiological_model):
     def __init__(self,vars_initials:list,params_initial:list,di:bool,name:str='SIR',name_var:list=['S','I','R'],
@@ -115,6 +127,9 @@ class SIR(Epidemiological_model):
         
     def numeric_solver(self, t_interval: list, params: list,method:str='RK45')->list:
         return super().numeric_solver(t_interval, params,method)
+
+    def plot(self,z,data:list,t_interval:list):
+        return super().plot(z,data,t_interval)
            
 class SIRS(Epidemiological_model):
     def __init__(self,vars_initials:list,params_initial:list,di:bool,name:str='SIRS',name_var:list=['S','I','R'],
@@ -145,6 +160,9 @@ class SIRS(Epidemiological_model):
     def numeric_solver(self,t_interval:list,params:list,method:str='RK45')->list:
         return super().numeric_solver(t_interval,params,method)
 
+    def plot(self,z,data:list,t_interval:list):
+        return super().plot(z,data,t_interval)
+
         
 class SEIR(Epidemiological_model):
     def __init__(self,vars_initials:list,params_initial:list,di:bool,name:str='SEIR',
@@ -174,3 +192,6 @@ class SEIR(Epidemiological_model):
         
     def numeric_solver(self,t_interval:list,params:list,method:str='RK45')->list:
         return super().numeric_solver(t_interval,params,method)
+
+    def plot(self,z,data:list,t_interval:list):
+        return super().plot(z,data,t_interval)
