@@ -25,7 +25,7 @@ class SolveEpidemiologicalModelsService:
         self.vars_initials = [S] + vars_initials
 
     def solve_model(self):
-        data = []
+        data = [[],[],[],[]]
         model = dict[self.name_model](self.vars_initials,self.params,self.di,params_est=self.params_est,N=self.N)
         sol = model.numeric_solver([0,self.t],self.params,self.method)
         model.plot(sol,data,[0,self.t])
