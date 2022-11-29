@@ -4,9 +4,10 @@ from business_logic.objective_function import ObjectiveFunction
 
 
 class ClassicalMethods:
-    def __init__(self, method:str, model: Epidemiological_model, data: list, params: list, bounds:list) -> None:
+    def __init__(self, method:str, model: Epidemiological_model, data: list, params: list, bounds:list,
+                method_num:str) -> None:
         self.method = method
-        self.objective_function = ObjectiveFunction(model, data)
+        self.objective_function = ObjectiveFunction(model, data,method_num)
         self.params = params
         self.bounds =bounds
 

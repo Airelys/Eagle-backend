@@ -4803,3 +4803,108 @@ ValueError: not enough values to unpack (expected 4, got 0)
 2022-11-24 16:35:14,934 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
 2022-11-24 16:39:12,676 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2022 16:39:12] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
 2022-11-24 16:39:14,428 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2022 16:39:14] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-25 00:53:38,720 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-25 00:55:07,257 - werkzeug - INFO - 127.0.0.1 - - [25/Nov/2022 00:55:07] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-25 00:55:10,031 - werkzeug - INFO - 127.0.0.1 - - [25/Nov/2022 00:55:10] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-25 00:55:49,393 - werkzeug - INFO - 127.0.0.1 - - [25/Nov/2022 00:55:49] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-25 00:55:50,611 - werkzeug - INFO - 127.0.0.1 - - [25/Nov/2022 00:55:50] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-25 00:56:37,401 - werkzeug - INFO - 127.0.0.1 - - [25/Nov/2022 00:56:37] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-25 00:56:39,005 - werkzeug - INFO - 127.0.0.1 - - [25/Nov/2022 00:56:39] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-25 00:57:32,726 - werkzeug - INFO - 127.0.0.1 - - [25/Nov/2022 00:57:32] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-25 00:57:32,742 - werkzeug - INFO - 127.0.0.1 - - [25/Nov/2022 00:57:32] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-25 00:57:42,781 - werkzeug - INFO - 127.0.0.1 - - [25/Nov/2022 00:57:42] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-26 14:41:03,976 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-26 14:43:59,882 - werkzeug - INFO - 127.0.0.1 - - [26/Nov/2022 14:43:59] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-26 14:44:05,893 - werkzeug - INFO - 127.0.0.1 - - [26/Nov/2022 14:44:05] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-26 14:45:06,554 - werkzeug - INFO - 127.0.0.1 - - [26/Nov/2022 14:45:06] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-26 14:45:07,958 - werkzeug - INFO - 127.0.0.1 - - [26/Nov/2022 14:45:07] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-27 13:13:55,171 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-27 13:57:09,685 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-27 14:16:54,104 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2022 14:16:54] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-27 14:16:55,310 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2022 14:16:55] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-27 14:23:42,760 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2022 14:23:42] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-27 14:23:42,762 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2022 14:23:42] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-27 14:23:44,602 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-27 14:23:44,826 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 15498041.563688122, best pos: [0.09029303]
+2022-11-27 14:23:45,757 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2022 14:23:45] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-27 14:35:43,423 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2022 14:35:43] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-27 14:35:43,425 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2022 14:35:43] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-27 14:35:44,638 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2022 14:35:44] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-27 14:38:56,076 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2022 14:38:56] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-27 14:38:56,086 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2022 14:38:56] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-27 14:38:56,162 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-27 14:38:56,497 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 6978342.093047451, best pos: [0.1329843]
+2022-11-27 14:38:57,193 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2022 14:38:57] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-29 10:31:57,295 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-29 10:43:51,072 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 10:43:51] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-29 10:43:58,288 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 10:43:58] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-29 10:45:08,190 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 10:45:08] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-29 10:45:08,192 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 10:45:08] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-29 10:45:14,512 - pyswarms.backend.generators - ERROR - generate_swarm() takes an int for n_particles and dimensions and an array for bounds
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\backend\generators.py", line 81, in generate_swarm
+    pos = center * np.random.uniform(
+  File "mtrand.pyx", line 1134, in numpy.random.mtrand.RandomState.uniform
+  File "_common.pyx", line 579, in numpy.random._common.cont
+  File "_common.pyx", line 487, in numpy.random._common.cont_broadcast_2
+TypeError: 'float' object cannot be interpreted as an integer
+2022-11-29 10:45:14,521 - server - ERROR - Exception on /api/ParameterEstimation [POST]
+Traceback (most recent call last):
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\controllers\parameter_estimation.py", line 35, in post
+    opt,sol,imgs,fun = self.s.solve_model()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\services\parameter_estimation_service.py", line 73, in solve_model
+    sol_met,fun = metaheuristic.solve()
+  File "D:\CIBERNÉTICA\Trabajo de Diploma\back_mio\src\business_logic\algorithms\metaheuristics.py", line 31, in solve
+    optimizer = ps.single.GlobalBestPSO(n_particles=self.particle,dimensions=self.dimension,options=self.dict_params, bounds=self.bounds)
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\single\global_best.py", line 134, in __init__
+    super(GlobalBestPSO, self).__init__(
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\base\base_single.py", line 124, in __init__
+    self.reset()
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\base\base_single.py", line 204, in reset
+    self.swarm = create_swarm(
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\backend\generators.py", line 236, in create_swarm
+    position = generate_swarm(
+  File "C:\Users\Airelys\AppData\Local\Programs\Python\Python39\lib\site-packages\pyswarms\backend\generators.py", line 81, in generate_swarm
+    pos = center * np.random.uniform(
+  File "mtrand.pyx", line 1134, in numpy.random.mtrand.RandomState.uniform
+  File "_common.pyx", line 579, in numpy.random._common.cont
+  File "_common.pyx", line 487, in numpy.random._common.cont_broadcast_2
+TypeError: 'float' object cannot be interpreted as an integer
+2022-11-29 10:45:14,700 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 10:45:14] "[35m[1mPOST //api/ParameterEstimation HTTP/1.1[0m" 500 -
+2022-11-29 10:52:54,629 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-29 10:54:03,132 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-29 10:54:43,394 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-29 10:57:41,671 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-29 10:58:40,875 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 3637248896.27899, best pos: [0.11978373 0.05373735]
+2022-11-29 11:02:50,181 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2022-11-29 11:03:47,751 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:03:47] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-29 11:03:47,753 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:03:47] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-29 11:03:48,873 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-29 11:03:49,161 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 13532911.239838943, best pos: [0.73777992 0.73052426]
+2022-11-29 11:03:51,225 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:03:51] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-29 11:06:05,892 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:06:05] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-29 11:06:05,896 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:06:05] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-29 11:06:09,857 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:06:09] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-29 11:07:19,905 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:07:19] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-29 11:07:19,906 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:07:19] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-29 11:07:19,983 - pyswarms.single.global_best - INFO - Optimize for 5 iters with {'c1': 0.5, 'c2': 0.3, 'w': 0.9}
+2022-11-29 11:07:20,298 - pyswarms.single.global_best - INFO - Optimization finished | best cost: 6936519.1276542265, best pos: [0.29091428]
+2022-11-29 11:07:21,759 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:07:21] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-29 11:08:42,483 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:08:42] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-29 11:08:42,487 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:08:42] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-29 11:08:45,996 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:08:45] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-29 11:09:51,931 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:09:51] "[37mOPTIONS //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-29 11:09:51,934 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:09:51] "[37mPOST //api/UploadFile HTTP/1.1[0m" 200 -
+2022-11-29 11:09:55,010 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:09:55] "[37mPOST //api/ParameterEstimation HTTP/1.1[0m" 200 -
+2022-11-29 11:10:37,783 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:10:37] "[37mOPTIONS //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -
+2022-11-29 11:10:39,120 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2022 11:10:39] "[37mPOST //api/SolveEpidemiologicalModels HTTP/1.1[0m" 200 -

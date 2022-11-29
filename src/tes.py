@@ -9,7 +9,7 @@ E0 = 10
 
 a =SIR([N-I0,I0,R0],[0.2,0.01,0,0,0],N,params_est=[True,True,False,False,False])
 
-met = DifferentialEvolution(a,read('C:\\Users\\Airelys\\Desktop\\n.xlsx',N,'SIR'),[(0,1),(0,1)],5)
+met = PSO(a,read('C:\\Users\\Airelys\\Desktop\\n.xlsx',N,'SIR'),[[0,0],[1,1]],'RK23',5)
 
 b = met.solve()
 

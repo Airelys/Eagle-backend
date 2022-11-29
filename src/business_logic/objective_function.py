@@ -3,12 +3,13 @@ from business_logic.model import Epidemiological_model
 
 class ObjectiveFunction:
     
-    def __init__(self, model: Epidemiological_model, data: list) -> None:
+    def __init__(self, model: Epidemiological_model, data: list, method:str) -> None:
         self.model = model
         self.data = data
+        self.method = method
  
     def objective_function(self, params:list):
-        numeric_solve = self.model.numeric_solver( [0,len(self.data[0])], params)
+        numeric_solve = self.model.numeric_solver( [0,len(self.data[0])], params,self.method)
         vector_numeric_solve = []
         vector_data = []
 
